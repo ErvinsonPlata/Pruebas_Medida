@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "crispy_tailwind",
     "rest_framework",
     'users',
+    'pruebas'
 ]
 
 MIDDLEWARE = [
