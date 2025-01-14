@@ -1,0 +1,8 @@
+
+<form action="{% url "RTC" %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Calcular</button>
+
+
+</form>
