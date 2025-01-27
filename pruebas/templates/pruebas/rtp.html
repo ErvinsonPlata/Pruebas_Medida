@@ -1,9 +1,8 @@
-
-
-<form action="{% url "RTP" %}" method="post">
+<form method="post">
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Calcular</button>
-
-
+    {{ form.as_p }}
+    <!– <input type="submit" value="Submit">
+    <button type="submit">Guardar</button>
 </form>
+
+{{ form.media }}
