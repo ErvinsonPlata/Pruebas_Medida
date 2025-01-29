@@ -5,9 +5,9 @@ from .models import CalculatorRTC, CalculatorRTP
 
 
 class FormsRTC(forms.Form):
-    rtc= forms.DecimalField(max_digits=4, decimal_places=0)
-    current_1= forms.DecimalField(max_digits=5, decimal_places=4)
-    current_2= forms.DecimalField(max_digits=5, decimal_places=4)
+    rtc= forms.DecimalField(max_digits=6, decimal_places=2)
+    current_1= forms.DecimalField(max_digits=10, decimal_places=4)
+    current_2= forms.DecimalField(max_digits=10, decimal_places=4)
     rtc_cal= forms.DecimalField(widget=calculation.FormulaInput('current_1/current_2'))
     error_rtc= forms.DecimalField(widget=calculation.FormulaInput('(((rtc*current_2)-current_1)/current_1)*100'))
 
@@ -21,9 +21,9 @@ class FormsRTC(forms.Form):
 
 
 class FormsRTP(forms.Form):
-    rtp= forms.DecimalField(max_digits=4, decimal_places=0)
-    voltage_1= forms.DecimalField(max_digits=5, decimal_places=4)
-    voltage_2= forms.DecimalField(max_digits=5, decimal_places=4)
+    rtp= forms.DecimalField(max_digits=6, decimal_places=2)
+    voltage_1= forms.DecimalField(max_digits=10, decimal_places=4)
+    voltage_2= forms.DecimalField(max_digits=10, decimal_places=4)
     rtp_cal= forms.DecimalField(widget=calculation.FormulaInput('voltage_1/voltage_2'))
     error_rtc= forms.DecimalField(widget=calculation.FormulaInput('(((rtp*voltage_2)-voltage_1)/voltage_1)*100'))
 
